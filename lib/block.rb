@@ -160,6 +160,7 @@ class Block
   end
 
   def merge (others)
+    result = Block.merge(others.push(self))
     # Implement.
   end
 end
