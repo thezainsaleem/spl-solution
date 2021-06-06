@@ -134,7 +134,6 @@ class Block
   # Return the result of adding the other Block (or Blocks) to self.
 
   def add (other)
-    
     return [self, other] if self.end < other.start
     return [other, self] if other.end < self.start
     if self.start <= other.start
@@ -154,7 +153,7 @@ class Block
       result = ele - block
       result.each do |r|
         result_to_return << r
-      end      
+      end
     end
     result_to_return
   end
