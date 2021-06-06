@@ -139,6 +139,18 @@ class Block
   
   # Return the result of subtracting the other Block (or Blocks) from self.
 
+  def subtract_one(first_array, block)
+    result_to_return = []
+    first_array.each do |ele|
+      result = ele - block
+      result.each do |r|
+        result_to_return << r
+      end
+    end
+    result_to_return
+  end
+
+
   def subtract (other)
     result = [self]
     if other.is_a? Array
